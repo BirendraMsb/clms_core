@@ -15,8 +15,8 @@ namespace clms.Controllers
         }
         public IActionResult Index()
         {
-            IEnumerable<User> objUser = _db.Users.ToList();
-            return View();
+            List<User> objUser = _db.Users.ToList();
+            return View(objUser);
         }
 
         //Get
@@ -34,9 +34,9 @@ namespace clms.Controllers
             {
                 _db.Users.Add(obj);
                 _db.SaveChanges();
-
+                return RedirectToAction("Index");
             }
-            return View();
+           return View(obj);
         }
 
         //Get
