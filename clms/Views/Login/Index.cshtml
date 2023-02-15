@@ -1,0 +1,158 @@
+﻿@model User
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CLMS | Login!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bootswatchTheme.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/clms.styles.css" asp-append-version="true" />
+
+    <link rel="icon" href="public/common/icons/favicon.ico" type="icon/png" />
+    <link rel="stylesheet" href="public/common/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/common/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="public/common/css/commoncss.min.css" />
+
+    <link rel="shortcut icon" href="public/common/icons/favicon.ico" />
+    <link rel="stylesheet" href="public/webfront/website/assets/css/main.min.css" />
+    <link rel="preload" href="public/webfront/website/assets/css/fonts/urbanist.css" />
+
+
+    <meta property="og:url" content="index.html">
+    <meta property="og:type" content="HR Solutions and Services">
+    <meta property="og:title" content="Organization Profile">
+    <meta property="og:description" content="GreenHRM Solutions has defined its Mission, Vision & Core Values to bring clarity to all our stakeholders.">
+    <meta property="og:image" content="public/webfront/website/assets/img/websocial/Facebook_Banner.html">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    @* <meta name="twitter:site" content="@greenhrmsolutions">
+    <meta name="twitter:creator" content="@greenhrmsolutions">*@
+    <meta property="og:site_name" content="greenhrm.in">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/common/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/common/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/common/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/common/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/common/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/common/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/common/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/common/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/common/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="public/common/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="public/common/icons/android-icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/common/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/common/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/common/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+<body class="bg-greenhrm">
+    <form method="post" asp-action="Index" enctype="multipart/form-data">
+        <div class="container " >
+            <div class="login_name_wrapper">
+                <div class="text-center mb-4">
+                    <h4 class="robotobold text-inverse">Green<span class="robotonormal">HRM</span><span class="robotonormal"> Solutions</span></h4>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center h-50">
+                <div class="user_card">
+                    <div class="d-flex justify-content-center">
+                        <div class="login_logo_container">
+                            <img sizes="(max-width: 150px) 100vw, 150px"
+                                 srcset="public/common/images/logoicon/Makewhite_kgvyyw_c_scale,w_150.png 150w"
+                                 src="public/common/images/logoicon/Makewhite_kgvyyw_c_scale,w_150.png"
+                                 class="login_logo" alt="GreenHRM Solutions | Breaking Stereotypes Logo" width="150" height="150" />
+                        </div>
+                    </div>
+                    <div class="form_container">
+                        <div class="text-center mb-4">
+                            <h2 class="robotobold">
+                                Admin
+                                <span class="robotonormal">Login</span>
+                            </h2>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="input-group">
+                                            <div class="input-group-append" >
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-users"> </i>
+                                                </span>
+                                            </div>
+                                            <select class="form-control" style="height:45px">
+                                                <option value="Admin">Admin</option>
+                                                <option value="Dept">User Department</option>
+                                                <option value="CC">Contractor Cell</option>
+                                                <option value="Safety">Safety</option>
+                                                <option value="Getpass">Getpass</option>
+                                                <option value="Vendor">Vendor</option>
+                                            </select>
+                                         </div>
+                                    </td>
+                                </tr>
+                                <tr><td style="height:10px;"></td></tr>
+                                <tr>
+                                    <td>
+                                        <div class="input-group">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" asp-for="Uid"  class="form-control" placeholder="Login ID" style="height:38px" />
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr><td style="height:10px;"></td></tr>
+                                <tr>
+                                    <td>
+                                        <div class="input-group">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-key"></i>
+                                                </span>
+                                            </div>
+                                            <input type="password" asp-for="Password" class="form-control" autocomplete="new-password" style="height:38px" aria-required="true" />
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr><td style="height:10px;"></td></tr>
+                                <tr>
+                                    <td>
+                                        <button id="registerSubmit" type="submit" class="w-100 btn btn-primary">LOG IN</button>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            <a href="forgot-password.aspx">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <p class="mb-0">&copy; 2022 GreenHRM Solutions | Breaking Stereotypes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script src="public/common/js/jquery.min.js"></script>
+    <script src="public/common/js/jquery.validate.min.js"></script>
+</body>
+</html>
