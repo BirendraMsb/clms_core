@@ -57,19 +57,55 @@ namespace clms.Controllers
 
         }
 
-        ////post
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Create(User obj)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _db.Users.Add(obj);
-        //        _db.SaveChanges();
+        //post
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(User obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Users.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
 
-        //    }
-        //    return View();
-        //}
+        //Get
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var userFromDb = _db.Users.Find(id);
+
+            if (userFromDb == null)
+            {
+                return NotFound();
+            }
+
+            return View(userFromDb);
+
+        }
+
+        //post
+        [HttpPost,ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int ? id)
+        {
+            var obj = _db.Users.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+                
+            _db.Users.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+          
+            
+        }
 
     }
 }

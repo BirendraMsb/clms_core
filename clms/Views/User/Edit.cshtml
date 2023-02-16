@@ -27,8 +27,10 @@
             <input type="email" asp-for="Email" class="form-control" />
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
-        <button  type="submit" class="btn btn-primary m-3" stype ="width:500px">Update</button>
-       
+        <button  type="submit" class="btn btn-primary m-3" style ="width:150px">Update</button>
+        <a asp-controller="User" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to List
+        </a>
     </div>
 </form>
 
