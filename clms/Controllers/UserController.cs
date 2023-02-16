@@ -34,6 +34,7 @@ namespace clms.Controllers
             {
                 _db.Users.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Created User Successfully";
                 return RedirectToAction("Index");
             }
            return View(obj);
@@ -66,6 +67,7 @@ namespace clms.Controllers
             {
                 _db.Users.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Updated User Successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -102,6 +104,7 @@ namespace clms.Controllers
                 
             _db.Users.Remove(obj);
             _db.SaveChanges();
+            TempData["success"] = "Deleted User Successfully";
             return RedirectToAction("Index");
           
             
