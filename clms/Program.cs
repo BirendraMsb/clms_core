@@ -1,4 +1,4 @@
-using clms.Data;
+using clms.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,5 +1,5 @@
-﻿using clms.Data;
-using clms.Models;
+﻿using clms.DataAccess;
+using clms_core.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace clms.Controllers

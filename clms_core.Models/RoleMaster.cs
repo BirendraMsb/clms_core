@@ -1,4 +1,4 @@
-﻿namespace clms.Models
+﻿namespace clms_core.Models
 {
     public class RoleMaster
     {

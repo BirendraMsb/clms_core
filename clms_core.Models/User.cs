@@ -1,9 +1,9 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+﻿//using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 
-namespace clms.Models;
+namespace clms_core.Models;
 
 public class User
 {

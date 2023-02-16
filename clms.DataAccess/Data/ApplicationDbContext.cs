@@ -1,7 +1,7 @@
-﻿using clms.Models;
+﻿using clms_core.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace clms.Data
+namespace clms.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {
